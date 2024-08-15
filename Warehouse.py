@@ -5,13 +5,19 @@ from mysql.connector import Error
 import toml
 import Harvest
 
+
 def insert_data(channel_data, video_data, comment_data):
     try:
         print(">>>>> Storing the data in MySQL Warehouse <<<<<")
         
-        # Connect to Database
-        mydb = mysql.connector.connect(host="localhost", user="root", password="123456")
-      
+       # Connecting to Database
+        host = st.secrets["credentials"]["host"]
+        user = st.secrets["credentials"]["user"]
+        # password = st.secrets["mysql"]["password"]
+        # database = st.secrets["mysql"]["database"]
+        
+        mydb = mysql.connector.connect(host = host, user = user, password = password, database = database)
+              
         if mydb.is_connected():
             print("Succesfully connected to MySQL database .....")
             mycur = mydb.cursor(buffered=True)
