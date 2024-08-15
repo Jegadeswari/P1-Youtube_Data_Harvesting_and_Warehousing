@@ -7,7 +7,7 @@ from googleapiclient.discovery import build
 from mysql.connector import Error
 
 # Set up YouTube Data API
-api_key = "AIzaSyCK-ruPpxAt_3zFvccTngT8sPfJ2An4y1E"
+api_key = "Your API Key"
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Extract channel data for a specific channel id
