@@ -3,8 +3,6 @@
 import mysql.connector
 from mysql.connector import Error
 import toml
-import Harvest
-
 
 def insert_data(channel_data, video_data, comment_data):
     try:
@@ -16,7 +14,7 @@ def insert_data(channel_data, video_data, comment_data):
         password = st.secrets["credentials"]["password"]
         database = st.secrets["credentials"]["database"]
         
-        mydb = mysql.connector.connect(host = host, user = user, password = password, database = database)
+        global mydb = mysql.connector.connect(host = host, user = user, password = password, database = database)
               
         if mydb.is_connected():
             print("Succesfully connected to MySQL database .....")
