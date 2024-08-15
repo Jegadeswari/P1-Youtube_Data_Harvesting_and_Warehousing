@@ -2,6 +2,7 @@
 
 import mysql.connector
 from mysql.connector import Error
+import streamlit as st
 import toml
 
 def insert_data(channel_data, video_data, comment_data):
@@ -14,7 +15,7 @@ def insert_data(channel_data, video_data, comment_data):
         password = st.secrets["credentials"]["password"]
         database = st.secrets["credentials"]["database"]
         
-        global mydb = mysql.connector.connect(host = host, user = user, password = password, database = database)
+        mydb = mysql.connector.connect(host=host, user=user, password=password, database=database)
               
         if mydb.is_connected():
             print("Succesfully connected to MySQL database .....")
@@ -68,7 +69,6 @@ def insert_data(channel_data, video_data, comment_data):
             
             # Insert channel data
             print("Inserting channel data ....")
-            print(ch)
             mycur.execute('''
                 INSERT INTO channels (channel_id, channel_name, channel_subscribers, channel_views, channel_video_count, channel_description, channel_status) 
                 VALUES (%s, %s, %s, %s, %s, %s, %s)
@@ -77,7 +77,6 @@ def insert_data(channel_data, video_data, comment_data):
                      
             #Insert video data
             print("Inserting video data .....")
-            print(video)
             for _, row in video_data.iterrows():
                 video_datetime_str = row['published_date'].replace('T', ' ').replace('Z', '')
                 mycur.execute('''
@@ -88,7 +87,6 @@ def insert_data(channel_data, video_data, comment_data):
 
             # Insert comment data
             print("Inserting comment data .....")
-            print(comment)
             for _, row in comment_data.iterrows():
                 cmt_datetime_str = row['comment_published'].replace('T', ' ').replace('Z', '')
                 mycur.execute('''
