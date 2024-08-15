@@ -13,8 +13,8 @@ def insert_data(channel_data, video_data, comment_data):
        # Connecting to Database
         host = st.secrets["credentials"]["host"]
         user = st.secrets["credentials"]["user"]
-        # password = st.secrets["mysql"]["password"]
-        # database = st.secrets["mysql"]["database"]
+        password = st.secrets["credentials"]["password"]
+        database = st.secrets["credentials"]["database"]
         
         mydb = mysql.connector.connect(host = host, user = user, password = password, database = database)
               
