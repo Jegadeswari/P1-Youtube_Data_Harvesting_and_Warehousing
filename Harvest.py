@@ -2,12 +2,13 @@
 
 import re
 import pandas as pd
+import streamlit as st
 import mysql.connector
 from googleapiclient.discovery import build
 from mysql.connector import Error
 
 # Set up YouTube Data API
-api_key = input("Your API Key: ")
+api_key = st.text_input("Your API Key: ")
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Extract channel data for a specific channel id
