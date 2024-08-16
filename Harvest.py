@@ -1,18 +1,19 @@
 # Harvest data from a Youtube channel using the Google API, Youtube Data API v3
-
 import re
 import pandas as pd
-import streamlit as st
 import mysql.connector
-from googleapiclient.discovery import build
 from mysql.connector import Error
+from dotenv import load_dotenv
+from googleapiclient.discovery import build
+import os
+
+load_dotenv()
 
 # Set up YouTube Data API
-api_key = "Your API Key"
+api_key = os.getenv("API_KEY")
 youtube = build('youtube', 'v3', developerKey=api_key)
 
 # Extract channel data for a specific channel id
-
 def extract_channel_data(youtube, channel_id):
     print("Extracting channel data .....")
     response = youtube.channels().list(

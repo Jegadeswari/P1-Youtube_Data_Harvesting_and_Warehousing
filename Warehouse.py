@@ -4,6 +4,7 @@ import mysql.connector
 from mysql.connector import Error
 import streamlit as st
 import toml
+import Harvest
 
 def insert_data(channel_data, video_data, comment_data):
     try:
@@ -16,6 +17,7 @@ def insert_data(channel_data, video_data, comment_data):
         database = st.secrets["credentials"]["database"]
         
         mydb = mysql.connector.connect(host=host, user=user, password=password, database=database)
+        #mydb = mysql.connector.connect(host="localhost", user="root", password="123456", database="youtube_test")
               
         if mydb.is_connected():
             print("Succesfully connected to MySQL database .....")
@@ -105,3 +107,7 @@ def insert_data(channel_data, video_data, comment_data):
             mycur.close()
             mydb.close()
             print("MySQL connection is closed .....")
+            
+#ch, video, comment = Harvest.extract_data("UC9Q4rw4dkey9lhK5FnYuigg") 
+
+#insert_data(ch, video, comment)
