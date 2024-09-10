@@ -1,18 +1,49 @@
-# P1-Youtube_Data_Harvesting_and_Warehousing
+# Overview
+This project aims to extract data from a specific YouTube channel using its Channel ID and store the extracted data in a SQL database. The main objective is to facilitate data analysis and reporting by systematically organizing and storing the channel's data. This includes retrieving video details, statistics, and other relevant metadata to provide insights into the channel's performance and content trends.
 
-**Problem Statement:**
-The problem statement is to create a Streamlit application that allows users to access and analyze data from multiple YouTube channels. The application should have the following features:
-  1. Ability to input a YouTube channel ID and retrieve all the relevant data (Channel name, subscribers, total video count, playlist ID, video ID, likes, dislikes, comments of each video) using Google API.
- 2. Ability to collect data for up to 10 different YouTube channels and store them in the data lake by clicking a button.
- Option to store the data in a MYSQL or PostgreSQL.
- 3. Ability to search and retrieve data from the SQL database using different search options, including joining tables to get channel details.
- 4. 
-**Approach:**
- 1. **Set up a Streamlit app:** Streamlit is a great choice for building data visualization and analysis tools quickly and easily.   You can use Streamlit to create a simple UI where users can enter a YouTube channel ID, view the channel details, and select channels to migrate to the data warehouse.
- 2. **Connect to the YouTube API:** You'll need to use the YouTube API to retrieve channel and video data. You can use the Google API client library for Python to make requests to the API.
- 3. **Store and Clean data :** Once you retrieve the data from the YouTube API, store it in a suitable format for temporary storage before migrating to the data warehouse. You can use pandas DataFrames or other in-memory data structures.
- 4. **Migrate data to a SQL data warehouse:** After you've collected data for multiple channels, you can migrate it to a SQL data warehouse. You can use a SQL database such as MySQL or PostgreSQL for this.
- 5. **Query the SQL data warehouse:** You can use SQL queries to join the tables in the SQL data warehouse and retrieve data for specific channels based on user input. You can use a Python SQL library such as SQLAlchemy to interact with the SQL database.
- 6. **Display data in the Streamlit app:** Finally, you can display the retrieved data in the Streamlit app. You can use Streamlit's data visualization features to create charts and graphs to help users analyze the data.
+# Features
+  • Channel Data Extraction: Fetch detailed information about videos from a specified YouTube channel using the Channel ID.
+  • Data Warehousing: Store the extracted data in a SQL database for efficient querying and analysis.
+  • Automated Data Pipeline: Set up an automated process to regularly update the database with the latest data from the channel.
+  • Data Analysis Ready: Organize the data in a structured format, making it easy to perform various data analysis tasks.
 
-Overall, this approach involves building a simple UI with Streamlit, retrieving data from the YouTube API, storing the data SQL as a warehouse, querying the data warehouse with SQL, and displaying the data in the Streamlit app.
+# Technologies Used
+  • ## Python: ## The core programming language used for developing the data extraction and processing scripts.
+  • ## YouTube Data API v3: Utilized to fetch data from the YouTube channel. For accessing this API you have to install a python pacakge called 'google-api-python-client'
+    To install this package:
+      > pip install google-api-python-client
+  • MySQL Database: MySQL is a Relational Database Management System (RDBMS) whereas the structured Query Language (SQL) is the language used for handling the RDBMS using commands i.e Creating, Inserting, Updating and Deleting the data from the databases.
+  • Pandas: For data manipulation and transformation.
+  • mysql-connetor: A MySQL database connector for Python, which is officially supported by Oracle. It provides a pure Python interface to MySQL databases, allowing you to connect to MySQL servers, execute SQL queries, and retrieve results.
+    To install this package:
+      > pip install mysql-connector
+  • Streamlit - Streamlit is an open-source Python library designed to create and share custom web applications for data science and machine learning projects with minimal effort. Its simplicity and focus on rapid prototyping make it a popular choice among data scientists and developers who need to quickly visualize and interact with data. Also you can download the data as csv file from the web application.
+    To install this package:
+      > pip install streamlit
+If you want you can install the packages sepeartely by above given command (or) you can also run below requirement file to install all the packages.
+
+# Installation
+Install the pytohn package that you needed for this project are provide in the requirement.txt file. Execute the requiremnt text in the cmd prompt or in terminal if you are using mac. By using the below command.
+      > pip install -r requirements.txt
+
+# Prerequisites
+  • Python 3.x installed on your system.
+  • A Google Cloud Project with YouTube Data API enabled.
+  • API Key from the Google Developer Console and paste it in Harvest.py python file.
+  • MySQL installed and set up your hostame, User ID and password in Warehouse.py python file.
+  • Streamlit web application sign in
+
+# Usage
+To clone a GitHub repository, you can use the git clone command
+    > git clone https://github.com/Hari1327/Project_1_Youtube_Data_Harvesting_and_Data_Warehousing.git
+To run this Streamlit application run the below command
+    > streamlit youtube_app.py
+
+# Project Structure
+  • Harvest.py: Main script to extract data from the YouTube channel.
+  • Warehouse.py: Contains functions for interacting with the SQL database.
+  • YouTube_app.py - contains the streamlit application settings.
+  • requirements.txt: List of Python dependencies.
+
+# Link to Video
+  [https://www.linkedin.com/posts/rjegadeswari_check-this-out-activity-7239186705327525888-5wXi?utm_source=share&utm_medium=member_desktop]
