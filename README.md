@@ -8,8 +8,8 @@ This project aims to extract data from a specific YouTube channel using its Chan
   • Data Analysis Ready: Organize the data in a structured format, making it easy to perform various data analysis tasks.
 
 # Technologies Used
-  • ## Python: ## The core programming language used for developing the data extraction and processing scripts.
-  • ## YouTube Data API v3: Utilized to fetch data from the YouTube channel. For accessing this API you have to install a python pacakge called 'google-api-python-client'
+  • Python: The core programming language used for developing the data extraction and processing scripts.
+  • YouTube Data API v3: Utilized to fetch data from the YouTube channel. For accessing this API you have to install a python pacakge called 'google-api-python-client'
     To install this package:
       > pip install google-api-python-client
   • MySQL Database: MySQL is a Relational Database Management System (RDBMS) whereas the structured Query Language (SQL) is the language used for handling the RDBMS using commands i.e Creating, Inserting, Updating and Deleting the data from the databases.
@@ -45,5 +45,5 @@ To run this Streamlit application run the below command
   • YouTube_app.py - contains the streamlit application settings.
   • requirements.txt: List of Python dependencies.
 
-# Link to Video
-  [https://www.linkedin.com/posts/rjegadeswari_check-this-out-activity-7239186705327525888-5wXi?utm_source=share&utm_medium=member_desktop]
+# Demo Video:
+  [https://bit.ly/YouTube-Data-Harvesting]
