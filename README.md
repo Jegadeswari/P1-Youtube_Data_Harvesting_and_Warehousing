@@ -25,12 +25,14 @@ This project aims to extract data from a specific YouTube channel using its Chan
   
   • **mysql-connetor:** A MySQL database connector for Python, which is officially supported by Oracle. It provides a pure Python interface to MySQL databases, allowing you to connect to MySQL servers, execute SQL queries, and retrieve results.
   
-    To install this package:
+  To install this package:
+  
        > pip install mysql-connector
        
   • **Streamlit:** Streamlit is an open-source Python library designed to create and share custom web applications for data science and machine learning projects with minimal effort. Its simplicity and focus on rapid prototyping make it a popular choice among data scientists and developers who need to quickly visualize and interact with data. Also you can download the data as csv file from the web application.
   
-    To install this package:
+  To install this package:
+  
        > pip install streamlit
        
 If you want you can install the packages sepeartely by above given command (or) you can also run below requirement file to install all the packages.
