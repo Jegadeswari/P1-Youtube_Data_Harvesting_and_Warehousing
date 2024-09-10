@@ -72,9 +72,9 @@ To run this Streamlit application run the below command
   • **requirements.txt:** List of Python dependencies.
 
   # References
-  • **Google API Docs Python:** [](https://developers.google.com/docs/api/quickstart/python)
+  • **Google API Docs Python:** [https://developers.google.com/docs/api/quickstart/python]
   
-  • **Warehouse.py:** Contains functions for interacting with the SQL database.
+  • **Streamlit:** [https://docs.streamlit.io/develop/api-reference]
   
 # Demo Video
   [https://bit.ly/YouTube-Data-Harvesting]
