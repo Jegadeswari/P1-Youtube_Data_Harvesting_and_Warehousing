@@ -13,8 +13,9 @@ This project aims to extract data from a specific YouTube channel using its Chan
 # Technologies Used
   • **Python:** The core programming language used for developing the data extraction and processing scripts.
   
-  • **YouTube Data API v3:** Utilized to fetch data from the YouTube channel. For accessing this API you have to install a python pacakge called 'google-api-python-client'
-    To install this package:
+  • **YouTube Data API v3:** Utilized to fetch data from the YouTube channel. For accessing this API you have to install a python pacakge called 'google-api-python-client'.
+  To install this package:
+  
        > pip install google-api-python-client
       
   • **MySQL Database:** MySQL is a Relational Database Management System (RDBMS) whereas the structured Query Language (SQL) is the language used for handling the RDBMS using commands i.e Creating, Inserting, Updating and Deleting the data from the databases.
