@@ -75,6 +75,3 @@ To run this Streamlit application run the below command
   • **Google API Docs Python:** [https://developers.google.com/docs/api/quickstart/python]
   
   • **Streamlit:** [https://docs.streamlit.io/develop/api-reference]
-  
-# Demo Video
-  [https://bit.ly/YouTube-Data-Harvesting]
